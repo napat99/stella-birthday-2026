@@ -2,30 +2,27 @@
   box-sizing: border-box;
 }
 
-html, body {
+html {
   margin: 0;
   padding: 0;
-  background: transparent;
-  min-height: 100vh;
+  min-height: 100%;
+  background-image: url('/assets/stripes.jpg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
   -webkit-font-smoothing: antialiased;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: transparent;
 }
 
 #root {
   max-width: 430px;
   margin: 0 auto;
   min-height: 100vh;
-}
-
-/* Fixed background — pins the stripe image to the viewport so it never
-   needs to tile vertically. Works on iOS Safari unlike background-attachment:fixed */
-html::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  background-image: url('/assets/stripes.jpg');
-  background-size: cover;
-  background-position: center;
 }
 
 /* hide scrollbar chrome */
