@@ -1,0 +1,24 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #efb8b3;
+  background-image: url('/assets/stripes.jpg');
+  background-size: 430px auto;
+  background-repeat: repeat-y;
+  background-position: top center;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  max-width: 430px;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+/* hide scrollbar chrome */
+.phone-scroll::-webkit-scrollbar { width: 0; height: 0; }
