@@ -5,9 +5,9 @@
 html, body {
   margin: 0;
   padding: 0;
-  background-color: #efb8b3;
+  background-color: #e85c3a;
   background-image: url('/assets/stripes.jpg');
-  background-size: 430px auto;
+  background-size: 100% auto;
   background-repeat: repeat-y;
   background-position: top center;
   min-height: 100vh;
