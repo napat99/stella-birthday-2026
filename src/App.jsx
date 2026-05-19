@@ -124,7 +124,7 @@ function Details() {
         <div style={{ textAlign: 'center', lineHeight: 1.0 }}>
           <div style={{
             fontFamily: bFont, fontSize: 16, color: forest,
-            fontWeight: 600, letterSpacing: 1.5, textTransform: 'uppercase', marginBottom: 10,
+            fontWeight: 600, letterSpacing: 0.5, marginBottom: 10,
           }}>
             Saturday
           </div>
@@ -144,7 +144,7 @@ function Details() {
           textAlign: 'center',
           background: 'rgba(255,255,255,0.55)',
         }}>
-          <div style={{ fontFamily: hFont, fontSize: 20, color: forest, marginBottom: 4 }}>
+          <div style={{ fontFamily: hFont, fontSize: 20, color: forest, fontWeight: 700, marginBottom: 4 }}>
             📍 Stellar Flower Shop
           </div>
           <div style={{ fontFamily: bFont, fontSize: 18, fontWeight: 500, color: maroon, lineHeight: 1.35 }}>
@@ -183,12 +183,7 @@ function Outfit() {
         color: cream,
         textAlign: 'center',
       }}>
-        <div style={{ position: 'relative', overflow: 'hidden' }}>
-          <div style={{
-            position: 'absolute', inset: -20,
-            backgroundImage: 'repeating-linear-gradient(90deg, transparent 0 22px, rgba(255,255,255,0.06) 22px 44px)',
-            pointerEvents: 'none',
-          }} />
+        <div style={{ position: 'relative' }}>
           <div style={{
             fontFamily: hFont, fontSize: 32, fontWeight: 700, lineHeight: 1.05,
             marginBottom: 14, position: 'relative', color: cream,
