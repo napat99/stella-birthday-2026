@@ -66,7 +66,7 @@ function Details() {
             June 27
           </div>
           <div style={{ fontFamily: hFont, fontSize: 26, color: forest, fontWeight: 700, marginTop: 4 }}>
-            2pm — 5pm
+            8pm — 11pm
           </div>
         </div>
 
@@ -478,7 +478,7 @@ function GuestList({ all, currentEntry, onBack }) {
 
 function Footer() {
   return (
-    <footer style={{ background: maroon, color: cream, padding: '20px 26px 60px', textAlign: 'center' }}>
+    <footer style={{ background: maroon, color: cream, padding: '20px 26px calc(60px + env(safe-area-inset-bottom, 0px))', textAlign: 'center' }}>
       <div style={{ fontFamily: hFont, fontSize: 30, fontWeight: 700, lineHeight: 1 }}>✿</div>
       <div style={{ fontFamily: bFont, fontSize: 14, fontWeight: 500, marginTop: 8, opacity: 0.85, letterSpacing: 0.3 }}>
         stellakwoun.com
