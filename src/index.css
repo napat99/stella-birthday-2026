@@ -5,11 +5,11 @@
 html, body {
   margin: 0;
   padding: 0;
-  background-color: #e85c3a;
-  background-image: url('/assets/stripes.jpg');
-  background-size: 100% auto;
-  background-repeat: repeat-y;
-  background-position: top center;
+  background: repeating-linear-gradient(
+    90deg,
+    #e04530 0px 44px,
+    #e8a0b0 44px 88px
+  );
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
 }
