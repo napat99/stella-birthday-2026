@@ -125,7 +125,7 @@ function Outfit() {
             Flower Shop Attire
           </div>
           <a
-            href="https://pinterest.com"
+            href="https://pin.it/2XNNersqA"
             target="_blank"
             rel="noreferrer"
             style={{
