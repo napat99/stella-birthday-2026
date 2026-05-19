@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, useMemo } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { loadRsvps, saveRsvp } from './lib/supabase'
 
 // ─── Design tokens ────────────────────────────────────────────
@@ -37,79 +37,13 @@ function Section({ children, top = 18, bottom = 14 }) {
 
 // ─── Hero ─────────────────────────────────────────────────────
 
-// Hook-shaped SVG date arc — curls up and over the upper-right of the
-// bouquet, matching Stella's original hand lettering style but with 2pm-5pm.
-function DateArc() {
-  const id = useMemo(() => 'date-path-' + Math.random().toString(36).slice(2, 8), [])
-  const d = 'M 10 180 C 20 60 180 10 310 50 C 380 70 400 140 370 200'
-  return (
-    <svg
-      viewBox="0 0 410 220"
-      width={410}
-      height={220}
-      style={{
-        overflow: 'visible',
-        position: 'absolute',
-        top: 50,
-        right: -100,
-        pointerEvents: 'none',
-        userSelect: 'none',
-      }}
-    >
-      <defs><path id={id} d={d} fill="none" /></defs>
-      <text fontFamily={hFont} fontWeight={700} fontSize={24} fill={forest} letterSpacing={0.5}>
-        <textPath href={`#${id}`} startOffset="8%" textAnchor="start">
-          Saturday June 27th · 2pm–5pm
-        </textPath>
-      </text>
-    </svg>
-  )
-}
-
 function Hero() {
-  const BOUQUET_W = 510
-  const BOUQUET_H = Math.round(BOUQUET_W * 1.22)
-  const HERO_H = BOUQUET_H + 80
-
   return (
-    <div style={{ position: 'relative', width: '100%', height: HERO_H, overflow: 'hidden' }}>
+    <div style={{ width: '100%' }}>
       <img
-        src="/assets/bouquet.png"
+        src="/assets/hero-cover.jpg"
         alt="Stellar Flower Shop — Stella's 27th birthday party"
-        style={{
-          position: 'absolute',
-          top: 12,
-          left: '50%',
-          transform: 'translateX(-50%)',
-          width: BOUQUET_W,
-          height: 'auto',
-          pointerEvents: 'none',
-          userSelect: 'none',
-          filter: 'drop-shadow(0 8px 18px rgba(80,20,20,0.18))',
-        }}
-      />
-
-      <h1 style={{
-        position: 'absolute', width: 1, height: 1, overflow: 'hidden',
-        clip: 'rect(0 0 0 0)', margin: -1, padding: 0, border: 0,
-      }}>
-        Stellar Flower Shop — Stella's 27th birthday party
-      </h1>
-
-      <DateArc />
-
-      <img
-        src="/assets/address.png"
-        alt="129 37th Street #705, Union City NJ"
-        style={{
-          position: 'absolute',
-          bottom: -180,
-          left: -150,
-          width: 560,
-          height: 'auto',
-          pointerEvents: 'none',
-          userSelect: 'none',
-        }}
+        style={{ width: '100%', display: 'block' }}
       />
     </div>
   )
